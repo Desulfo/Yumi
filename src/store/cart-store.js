@@ -1,7 +1,7 @@
 import React from "react";
 
 const CartContext = React.createContext({
-  meals: [],
+  meals: [{ name: "sushi" }],
 });
 
-export default cart - store;
+export default CartContext;
