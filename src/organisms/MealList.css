@@ -1,0 +1,76 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.Meals {
+  margin-top: 150px;
+  margin-bottom: 80px;
+}
+.Meals ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 19px 10px #000000;
+  -webkit-box-shadow: 0px 4px 19px 10px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.Meals ul li {
+  padding: 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.Meals ul li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.Meals ul li:not(:last-child):after {
+  position: absolute;
+  width: 90%;
+  bottom: 0.5rem;
+  content: "";
+  border-bottom: 1px solid hsl(0, 0%, 20%);
+  left: 5%;
+}
+.meal--title {
+  font-size: 1.75rem;
+  font-weight: bolder;
+  margin: 0.5em 0 0.25em;
+  text-transform: capitalize;
+}
+.meal--price {
+  font-size: 2rem;
+  color: hsl(46, 60%, 55%);
+  font-weight: bolder;
+  margin: 0.5em 0 1em;
+}
+.Meals form {
+  display: flex;
+  flex-direction: column;
+}
+.Meals label {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.Meals input {
+  margin-left: 1rem;
+  width: 2rem;
+  text-align: center;
+}

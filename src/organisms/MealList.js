@@ -1,24 +1,30 @@
 import React from "react";
+
+import "./MealList.css";
 import Button from "../atoms/Button.js";
-import meals from "../data/meals.js";
+import meals from "../data/meals";
 
 function MealList() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+  };
   return (
-    <main>
+    <main className="Meals">
       <ul>
         {meals.map((meal) => (
           <li key={meal.title}>
             <div>
-              <h3>{meal.title}</h3>
+              <h3 className="meal--title">{meal.title}</h3>
               <p>
                 <small>{meal.description}</small>
               </p>
-              <h4>{meal.price}</h4>
+              <p className="meal--price">${meal.price}</p>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
               <label>
                 Amount
-                <input type="number" />{" "}
+                <input type="number" defaultValue="1" />{" "}
               </label>
               <Button type="submit">Add</Button>
             </form>

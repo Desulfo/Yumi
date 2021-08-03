@@ -1,0 +1,12 @@
+.ModalWrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  display: none;
+}
+.ModalWrapper.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
