@@ -1,0 +1,13 @@
+.Main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  z-index: 1;
+  background-color: hsl(0, 75%, 40%);
+}
