@@ -8,7 +8,7 @@ function SingleMeal(props) {
   const [amountInput, setAmountInput] = useState("1");
   const handleSubmit = (e) => {
     e.preventDefault();
-    cartCtx.addMeal(props.meal, amountInput);
+    cartCtx.addMeal(props.meal, parseInt(amountInput));
   };
   return (
     <li>
