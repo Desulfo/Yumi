@@ -1,7 +1,9 @@
 import React from "react";
 
 const CartContext = React.createContext({
-  meals: [{ name: "sushi" }],
+  meals: [],
+  addMeal: () => {},
+  removeMeal: () => {},
 });
 
 export default CartContext;

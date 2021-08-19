@@ -10,3 +10,45 @@
   justify-content: center;
   align-items: center;
 }
+.ModalWrapper main {
+  padding: 2rem 1em;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.ModalWrapper main ul {
+  max-height: 80rem;
+  overflow-y: scroll;
+  list-style: none;
+  padding: 0;
+}
+.ModalWrapper main li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ModalWrapper footer {
+  font-size: 3rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+}
+/* Track */
+.ModalWrapper main ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.ModalWrapper main ul::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.ModalWrapper main ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

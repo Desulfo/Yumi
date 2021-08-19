@@ -1,5 +1,5 @@
 .App-header {
-  background: #282c34 url("img/food-bg.jpg") center center no-repeat;
+  background: #282c34 url("assets/img/food-bg.jpg") center center no-repeat;
   background-size: cover;
   clip-path: polygon(100% 0, 100% 80%, 16% 100%, 0 100%, 0 0);
   height: 50vh;

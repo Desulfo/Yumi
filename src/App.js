@@ -2,7 +2,7 @@ import "./App.css";
 import MainNav from "./organisms/MainNav";
 import WelcomeArticle from "./organisms/WelcomeArticle";
 import MealList from "./organisms/MealList";
-import CartProvider from "./store/CartProvider";
+import CartProvider from "./assets/store/CartProvider";
 
 function App() {
   return (
