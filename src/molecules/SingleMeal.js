@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
+import CartContext from "../assets/store/cart-store";
 import Button from "../atoms/Button";
 
 function SingleMeal(props) {
+  const cartCtx = useContext(CartContext);
   const [amountInput, setAmountInput] = useState("1");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(amountInput);
+    cartCtx.addMeal(props.meal, amountInput);
   };
   return (
     <li>

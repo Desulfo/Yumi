@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import Cart from "./Cart";
 import CartButton from "../molecules/CartButton";
-import "./MainNav.css";
+import styles from "./MainNav.module.css";
 
 function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +12,8 @@ function MainNav() {
     setIsOpen((prevState) => !prevState);
   };
   return (
-    <nav className="Main-nav">
-      <h2 className="Company-name">YumiMeals</h2>
+    <nav className={styles.mainNav}>
+      <h2 className={styles.logo}>YumiMeals</h2>
       <CartButton isOpenHandler={isOpenHandler} />
       {ReactDOM.createPortal(
         <Cart open={isOpen} close={isOpenHandler} />,
