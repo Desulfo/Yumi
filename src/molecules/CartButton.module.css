@@ -1,0 +1,27 @@
+.btnCart {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.icon {
+  height: 1em;
+  margin-right: 0.75em;
+}
+.amount {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  --size: 1.5em;
+  height: var(--size);
+  width: var(--size);
+  margin-left: 0.75em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(46, 60%, 45%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

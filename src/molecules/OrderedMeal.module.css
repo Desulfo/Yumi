@@ -1,0 +1,43 @@
+.meal {
+  position: relative;
+  margin-bottom: 2em;
+}
+.meal:after {
+  position: absolute;
+  width: 100%;
+  bottom: -0.75rem;
+  content: "";
+  border-bottom: 1px solid hsl(0, 0%, 20%);
+  left: 0;
+}
+.mealHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+.mealHeader h4 {
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 1.5em;
+}
+.amountWrapper {
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+.btnSecondary {
+  margin: 0.5em;
+  --size: 1.75em;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 5px;
+  border: 1.5px solid hsl(46, 60%, 35%);
+  background-color: #fff;
+  color: hsl(46, 60%, 35%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

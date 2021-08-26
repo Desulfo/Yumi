@@ -1,0 +1,12 @@
+.btn {
+  cursor: pointer;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 15px;
+  background-color: hsl(46, 60%, 35%);
+  color: white;
+}
+.btn:hover,
+.btn:focus {
+  background-color: hsl(46, 45%, 25%);
+}
