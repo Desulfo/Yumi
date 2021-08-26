@@ -10,6 +10,9 @@ function SingleMeal(props) {
     e.preventDefault();
     cartCtx.addMeal(props.meal, parseInt(amountInput));
   };
+  const removeHandler = () => {
+    cartCtx.removeMeal(props.meal);
+  };
   return (
     <li>
       <div>
@@ -32,6 +35,7 @@ function SingleMeal(props) {
         </label>
         <Button type="submit">Add</Button>
       </form>
+      <button onClick={removeHandler}>remove</button>
     </li>
   );
 }

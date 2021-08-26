@@ -6,6 +6,10 @@ import styles from "./CartButton.module.css";
 
 function CartButton(props) {
   const cartCtx = useContext(CartContext);
+  const amountOfMeals = cartCtx.meals.reduce(
+    (total, num) => total + num.amount,
+    0
+  );
   return (
     <Button
       onClick={props.isOpenHandler}
@@ -28,7 +32,7 @@ function CartButton(props) {
         ></path>
       </svg>
       Cart
-      <span className={styles.amount}>{cartCtx.meals.length}</span>
+      <span className={styles.amount}>{amountOfMeals}</span>
     </Button>
   );
 }

@@ -17,7 +17,21 @@ function CartProvider(props) {
     }
     setMealsInCart((prevState) => [{ ...item, amount: amount }, ...prevState]);
   };
-  const removeMealHandler = () => {};
+
+  const removeMealHandler = (item, amount = 1) => {
+    const mealInCart = mealsInCart.find((meal) => meal.title === item.title);
+    if (!mealInCart) {
+      return;
+    }
+    mealInCart.amount = mealInCart.amount - amount;
+    if (mealInCart.amount <= 0) {
+      setMealsInCart((prevState) =>
+        [...prevState].filter((meal) => meal.title !== item.title)
+      );
+      return;
+    }
+    setMealsInCart((prevState) => [...prevState]);
+  };
   const resetHandler = () => {
     setMealsInCart(initMealsInCart);
   };
