@@ -11,7 +11,7 @@
   align-items: center;
 }
 .ModalWrapper main {
-  padding: 2rem 1em;
+  padding: 2rem 1.5em;
   background-color: #fff;
   border-radius: 5px;
   width: 100%;
@@ -22,8 +22,8 @@
   -o-border-radius: 5px;
 }
 .ModalWrapper main ul {
-  max-height: 80rem;
-  overflow-y: scroll;
+  overflow-y: auto;
+  max-height: 50vh;
   list-style: none;
   padding: 0;
 }
@@ -33,10 +33,15 @@
   align-items: center;
 }
 .ModalWrapper footer {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bolder;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.ModalWrapper footer p {
+  margin: 0;
+  margin-bottom: 1em;
 }
 /* Track */
 .ModalWrapper main ul::-webkit-scrollbar-track {
@@ -51,4 +56,16 @@
 /* Handle on hover */
 .ModalWrapper main ul::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+.buttonsWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.buttonsWrapper button {
+  margin: 0 0.5em;
+}
+@media (min-width: 768px) {
+  .ModalWrapper main ul {
+    overflow-y: hidden;
+  }
 }

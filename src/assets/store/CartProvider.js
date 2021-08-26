@@ -7,7 +7,7 @@ const isNameInArr = (item) => {};
 function CartProvider(props) {
   const [mealsInCart, setMealsInCart] = useState(initMealsInCart);
 
-  const addMealHandler = (item, amount) => {
+  const addMealHandler = (item, amount = 1) => {
     const mealInCart = mealsInCart.find((meal) => meal.title === item.title);
     if (mealInCart) {
       mealInCart.amount = mealInCart.amount + amount;

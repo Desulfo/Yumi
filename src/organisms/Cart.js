@@ -1,8 +1,13 @@
 import React, { useContext } from "react";
 
-import classes from "./Cart.module.css";
+import styles from "./Cart.module.css";
 import Button from "../atoms/Button";
 import CartContext from "../assets/store/cart-store";
+import OrderedMeal from "../molecules/OrderedMeal";
+
+const stopPropagation = (e) => {
+  e.stopPropagation();
+};
 
 function Cart(props) {
   const cartCtx = useContext(CartContext);
@@ -10,33 +15,30 @@ function Cart(props) {
   const orderHandler = (e) => {
     e.preventDefault();
     console.log("Ordering ....");
-    props.close();
-  };
-  const stopPropagation = (e) => {
-    e.stopPropagation();
+    cartCtx.reset();
+    props.close(e);
   };
 
-  const totalPrice = 1;
+  const totalPrice = cartCtx.meals.reduce(
+    (total, meal) => total + meal.amount * meal.price,
+    0
+  );
+
   return (
     <section
       onClick={props.close}
-      className={`${classes.ModalWrapper} ${props.open ? classes.open : ""}`}
+      className={`${styles.ModalWrapper} ${props.open ? styles.open : ""}`}
     >
       <main onClick={stopPropagation}>
         <ul>
           {cartCtx.meals &&
-            cartCtx.meals.map((item) => (
-              <li key={item.name}>
-                <div>{item.name}</div>
-                <div>price</div>
-              </li>
-            ))}
+            cartCtx.meals.map((meal) => <OrderedMeal meal={meal} />)}
         </ul>
         <footer>
-          <p>Total Price: </p>
-          <p>${totalPrice}</p>
+          <p>Total Price:</p>
+          <p>${totalPrice.toFixed(2)}</p>
         </footer>
-        <div>
+        <div className={styles.buttonsWrapper}>
           <Button onClick={props.close} type="button">
             Close
           </Button>
