@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import CartContext from "./cart-store";
 
-// [{meal.title: "", meal.price: number, amount: number}]
 const initMealsInCart = [];
-const isNameInArr = (item) => {};
+
 function CartProvider(props) {
   const [mealsInCart, setMealsInCart] = useState(initMealsInCart);
 

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 
-import styles from "./Cart.module.css";
 import Button from "../atoms/Button";
 import CartContext from "../assets/store/cart-store";
 import OrderedMeal from "../molecules/OrderedMeal";
+import styles from "./Cart.module.css";
 
 const stopPropagation = (e) => {
   e.stopPropagation();
@@ -13,10 +13,13 @@ function Cart(props) {
   const cartCtx = useContext(CartContext);
 
   const orderHandler = (e) => {
-    e.preventDefault();
-    console.log("Ordering ....");
-    cartCtx.reset();
     props.close(e);
+    cartCtx.reset();
+    const message =
+      cartCtx.meals.length > 0
+        ? "Ordering ...."
+        : "You have to choose something to order first ;)";
+    alert(message); //how to make it appear after clos of modal?
   };
 
   const totalPrice = cartCtx.meals.reduce(
